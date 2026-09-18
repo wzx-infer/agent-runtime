@@ -41,6 +41,12 @@ class Memory:
         """获取最近的 N 条记忆"""
         return self.entries[-count:] if count > 0 else []
 
+    def search(self, query: str) -> List[Dict]:
+        """搜索记忆内容"""
+        query_lower = query.lower()
+        return [entry for entry in self.entries
+                if query_lower in entry['content'].lower()]
+
     def clear(self):
         """清空记忆"""
         self.entries = []

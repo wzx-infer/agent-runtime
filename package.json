@@ -1,0 +1,33 @@
+{
+  "name": "agent-runtime",
+  "version": "0.1.0",
+  "description": "一个适合初学者学习的 Agent Runtime 框架，具有良好的可扩展性",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/examples/basic.ts",
+    "start": "node dist/examples/basic.js",
+    "test": "jest",
+    "example:basic": "ts-node src/examples/basic.ts",
+    "example:chat": "ts-node src/examples/chat-agent.ts",
+    "example:tools": "ts-node src/examples/tool-agent.ts"
+  },
+  "keywords": [
+    "agent",
+    "ai",
+    "runtime",
+    "llm",
+    "autonomous"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  }
+}
